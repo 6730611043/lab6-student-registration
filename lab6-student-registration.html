@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+</head>
+
+<body class="bg-gray-100">
+
+
+  <nav class="bg-white shadow sticky top-0">
+    <div class="max-w-4xl mx-auto flex justify-between items-center p-4">
+      <h1 class="font-bold text-lg">My Register</h1>
+    </div>
+  </nav>
+
+
+  <div class="max-w-3xl mx-auto mt-10 bg-white p-6 rounded-lg shadow">
+    <h2 class="text-xl font-semibold mb-4">Student Registration Form</h2>
+
+```
+<form id="regForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+  <div>
+    <label>ชื่อ-นามสกุล</label>
+    <input type="text" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+  </div>
+
+  <div>
+    <label>รหัสนักศึกษา</label>
+    <input type="text" class="w-full border rounded-lg p-2">
+  </div>
+
+  <div>
+    <label>คณะ/สาขา</label>
+    <input type="text" class="w-full border rounded-lg p-2">
+  </div>
+
+  <div>
+    <label>อีเมล</label>
+    <input type="email" class="w-full border rounded-lg p-2">
+  </div>
+
+  <div>
+    <label>เบอร์โทร</label>
+    <input type="text" class="w-full border rounded-lg p-2">
+  </div>
+
+  <div class="md:col-span-2 text-center mt-4">
+    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+      ส่งข้อมูล
+    </button>
+  </div>
+
+</form>
+
+<div id="successMsg" class="hidden text-green-600 text-center mt-4">
+  ลงทะเบียนสำเร็จ
+</div>
+```
+
+  </div>
+
+  <script>
+    const form = document.getElementById("regForm");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      form.classList.add("hidden");
+      document.getElementById("successMsg").classList.remove("hidden");
+    });
+  </script>
+
+</body>
+</html>
